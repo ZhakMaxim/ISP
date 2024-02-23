@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISP_253504_Zhak.ThirdLabPage"
+             Title="ThirdLabPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+
+        <Picker x:Name="CocktailPicker" Title="Select a coctail" 
+        ItemsSource="{Binding Cocktails}" 
+        ItemDisplayBinding="{Binding Name}" 
+        Loaded="CoctailsLoaded" 
+        SelectedIndexChanged="OnCocktailSelected">
+        </Picker>
+
+        <CollectionView x:Name="CollView" Grid.Row="1" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame HeightRequest="50" WidthRequest="300" Margin="0,0,0,10">
+                        <Label Text="{Binding Name}" HeightRequest="20"></Label>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
