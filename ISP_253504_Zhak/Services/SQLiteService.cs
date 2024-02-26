@@ -20,12 +20,12 @@ namespace ISP_253504_Zhak.Services
 
         }
 
-        public IEnumerable<Cocktail> GetAllCoctail()
+        public IEnumerable<Cocktail> GetAllCocktail()
         {
             return db.Table<Cocktail>().ToList();
         }
 
-        public IEnumerable<Ingridient> GetCoctailIngridients(int id)
+        public IEnumerable<Ingridient> GetCocktailIngridients(int id)
         {
             return db.Table<Ingridient>().Where(i => i.CocktailId == id).ToList();
         }

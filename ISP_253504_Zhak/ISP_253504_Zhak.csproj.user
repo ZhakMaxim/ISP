@@ -15,6 +15,9 @@
     <PlatformTarget>arm64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="FourthLabPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="SecondLabPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

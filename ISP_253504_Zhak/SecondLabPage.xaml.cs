@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace ISP_253504_Zhak
 {
@@ -13,11 +14,13 @@ namespace ISP_253504_Zhak
 
         private async Task CalculateIntegralAsync()
         {
+            Debug.WriteLine($"main thread =====================>{ Thread.CurrentThread.ManagedThreadId}");
             double result = 0.0;
             double step = 0.00001;
             int iterations = 10000;
             await Task.Run(() =>
             {
+                Debug.WriteLine($"integral thread =====================>{Thread.CurrentThread.ManagedThreadId}");
                 for (double x = 0; x < 1; x += step)
                 {
                     for (int i = 0; i < iterations; i++)
@@ -43,6 +46,7 @@ namespace ISP_253504_Zhak
 
             StartBtn.IsEnabled = true;
             CancelBtn.IsEnabled = false;
+            Debug.WriteLine($"main thread =====================>{Thread.CurrentThread.ManagedThreadId}");
         }
 
         private void ReportProgress(double progress)
@@ -62,7 +66,6 @@ namespace ISP_253504_Zhak
 
             source = new CancellationTokenSource();
             await CalculateIntegralAsync();
-
         }
 
         private void OnCancelButtonClicked(object sender, EventArgs e)

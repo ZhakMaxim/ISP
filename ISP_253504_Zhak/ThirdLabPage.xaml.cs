@@ -5,20 +5,20 @@ using System.Collections.ObjectModel;
 
 public partial class ThirdLabPage : ContentPage
 {
-    private SQLiteService sqliteService;
+    private IDbService sqliteService;
     public ObservableCollection<Cocktail> Cocktails { get; set; }
-    public ThirdLabPage()
+    public ThirdLabPage(IDbService dbService)
 	{
 		InitializeComponent();
 
-        sqliteService = new SQLiteService();
+        sqliteService = dbService;
         sqliteService.Init();
 
     }
       
-    private void CoctailsLoaded(object sender, EventArgs e)
+    private void CocktailsLoaded(object sender, EventArgs e)
     {
-        Cocktails = new ObservableCollection<Cocktail>(sqliteService.GetAllCoctail());
+        Cocktails = new ObservableCollection<Cocktail>(sqliteService.GetAllCocktail());
         CocktailPicker.ItemsSource = Cocktails;
     }
 
@@ -28,7 +28,7 @@ public partial class ThirdLabPage : ContentPage
 
         if (selectedCocktail != null)
         {
-            var ingredients = sqliteService.GetCoctailIngridients(selectedCocktail.Id);
+            var ingredients = sqliteService.GetCocktailIngridients(selectedCocktail.Id);
             CollView.ItemsSource = ingredients;
         }
     }

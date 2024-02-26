@@ -16,7 +16,7 @@
         <Picker x:Name="CocktailPicker" Title="Select a coctail" 
         ItemsSource="{Binding Cocktails}" 
         ItemDisplayBinding="{Binding Name}" 
-        Loaded="CoctailsLoaded" 
+        Loaded="CocktailsLoaded" 
         SelectedIndexChanged="OnCocktailSelected">
         </Picker>
 

@@ -9,8 +9,8 @@ namespace ISP_253504_Zhak.Services
 {
     public interface IDbService
     {
-        public IEnumerable<Cocktail> GetAllCoctail();
-        public IEnumerable<Ingridient> GetCoctailIngridients(int id);
+        public IEnumerable<Cocktail> GetAllCocktail();
+        public IEnumerable<Ingridient> GetCocktailIngridients(int id);
         public void Init();
     }
 }

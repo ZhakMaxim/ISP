@@ -175,3 +175,16 @@ C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-win
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\RandomString4Net.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.nativelibrary.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ISP_253504_Zhak.sourcelink.json
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Http.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Options.ConfigurationExtensions.dll

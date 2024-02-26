@@ -27,4 +27,11 @@
     ContentTemplate="{DataTemplate local:ThirdLabPage}"
     Route="ThirdLabPage" />
     </FlyoutItem>
+
+    <FlyoutItem Title="Lab4" Route="FourthLabPage">
+        <ShellContent
+    Title="FourthLab"
+    ContentTemplate="{DataTemplate local:FourthLabPage}"
+    Route="FourthLabPage" />
+    </FlyoutItem>
 </Shell>
