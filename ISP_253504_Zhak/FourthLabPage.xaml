@@ -4,15 +4,22 @@
              x:Class="ISP_253504_Zhak.FourthLabPage"
              Title="FourthLabPage">
     <VerticalStackLayout>
-         <CollectionView x:Name="CollView" Grid.Row="1" >
-     <CollectionView.ItemTemplate>
-         <DataTemplate>
-             <Frame HeightRequest="50" WidthRequest="300" Margin="0,0,0,10">
-             <Label Text="{Binding Cur_Name}" HeightRequest="20"></Label>
-             </Frame>
-         </DataTemplate>
-     </CollectionView.ItemTemplate>
- </CollectionView>
-        <Button Text="button" x:Name="btn" Clicked="OnBtnClicked"></Button>
+        <Picker x:Name="CurrencyPicker" Title="Select a Currency" 
+            ItemsSource="{Binding rates}" 
+            ItemDisplayBinding="{Binding Cur_Name}" 
+            Loaded="CurrencyLoaded"
+            SelectedIndexChanged="OnCurrencySelected">
+        </Picker>
+        <Label Text="Пересчет в валюту" HorizontalOptions="Center" HeightRequest="20"></Label>
+        <Frame HeightRequest="60" WidthRequest="300" Margin="0,0,0,10" HorizontalOptions="Center">
+            <Label x:Name="InoCurrencyLabel"></Label>
+            
+        </Frame>
+        <Label Text="Пересчет в белорусские рубли" HorizontalOptions="Center" HeightRequest="20"></Label>
+        <Frame HeightRequest="60" WidthRequest="300" Margin="0,0,0,10" HorizontalOptions="Center">
+            <Label x:Name="BelCurrencyLabel" ></Label>
+        </Frame>
+
+        <DatePicker x:Name="DatePick"></DatePicker>
     </VerticalStackLayout>
 </ContentPage>

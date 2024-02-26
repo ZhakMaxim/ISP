@@ -188,3 +188,4 @@ C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-win
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.Abstractions.dll
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Http.dll
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll

@@ -1,6 +1,5 @@
 using ISP_253504_Zhak.Entities;
 using ISP_253504_Zhak.Services;
-using Kotlin.Properties;
 using System.Diagnostics;
 
 namespace ISP_253504_Zhak;
@@ -14,13 +13,38 @@ public partial class FourthLabPage : ContentPage
         InitializeComponent();
 		
 	}
-    private async void OnBtnClicked(object sender, EventArgs e)
+
+    private async void CurrencyLoaded(object sender, EventArgs e)
     {
 
-        var rates = rateServise.GetRates(new DateTime(2024,2,26));
-        IEnumerable<Rate> rates_ = await rates;
-        CollView.ItemsSource = rates_.ToList();
+        var buff = rateServise.GetRates(DatePick.Date);
+        Debug.WriteLine(DatePick.Date.Day);
+        IEnumerable<Rate> buff_ = await buff;
+        var allRates = buff_.ToList();
+        List<Rate> rates = new();
+        foreach (var rate in allRates)
+        {
+            if (rate.Cur_Name == "Российских рублей" || rate.Cur_Name == "Евро" || rate.Cur_Name == "Доллар США" ||
+                rate.Cur_Name == "Швейцарский франк" || rate.Cur_Name == "Китайских юаней" || rate.Cur_Name == "Фунт стерлингов")
+            {
+                rates.Add(rate);
+                Debug.WriteLine(rate.Cur_Name);
+            }
+        }
+        CurrencyPicker.ItemsSource = rates;
 
     }
-}
 
+    private void OnCurrencySelected(object sender, EventArgs e) 
+    {
+        var selectedCurrency = CurrencyPicker.SelectedItem as Rate;
+        if (selectedCurrency != null)
+        {
+            InoCurrencyLabel.Text = selectedCurrency.Cur_OfficialRate.ToString();
+            BelCurrencyLabel.Text = (1 / float.Parse(InoCurrencyLabel.Text)).ToString();
+        }
+        
+    }
+
+
+}

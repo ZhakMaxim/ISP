@@ -1049,5 +1049,5 @@ C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-and
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Diagnostics.dll
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Http.dll
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Options.ConfigurationExtensions.dll
-C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-android\android\assets\Newtonsoft.Json.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll

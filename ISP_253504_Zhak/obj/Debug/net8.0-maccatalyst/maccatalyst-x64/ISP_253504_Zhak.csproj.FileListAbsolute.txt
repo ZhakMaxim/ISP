@@ -305,3 +305,9 @@ C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-mac
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
 C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ISP_253504_Zhak.sourcelink.json
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Diagnostics.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Http.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\MaxPl\source\repos\ISP_253504_Zhak\ISP_253504_Zhak\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Newtonsoft.Json.dll
