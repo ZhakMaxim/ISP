@@ -11,14 +11,12 @@ public partial class FourthLabPage : ContentPage
 	{
         rateServise = rate;
         InitializeComponent();
-		
+		DatePick.MaximumDate = DateTime.Now;
 	}
 
-    private async void CurrencyLoaded(object sender, EventArgs e)
+    private async void OnDateSelected(object sender, EventArgs e)
     {
-
         var buff = rateServise.GetRates(DatePick.Date);
-        Debug.WriteLine(DatePick.Date.Day);
         IEnumerable<Rate> buff_ = await buff;
         var allRates = buff_.ToList();
         List<Rate> rates = new();
@@ -32,7 +30,6 @@ public partial class FourthLabPage : ContentPage
             }
         }
         CurrencyPicker.ItemsSource = rates;
-
     }
 
     private void OnCurrencySelected(object sender, EventArgs e) 
@@ -40,8 +37,8 @@ public partial class FourthLabPage : ContentPage
         var selectedCurrency = CurrencyPicker.SelectedItem as Rate;
         if (selectedCurrency != null)
         {
-            InoCurrencyLabel.Text = selectedCurrency.Cur_OfficialRate.ToString();
-            BelCurrencyLabel.Text = (1 / float.Parse(InoCurrencyLabel.Text)).ToString();
+            ForCurrencyLabel.Text = selectedCurrency.Cur_OfficialRate.ToString();
+            BelCurrencyLabel.Text = (1 / float.Parse(ForCurrencyLabel.Text)).ToString();
         }
         
     }
