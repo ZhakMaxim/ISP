@@ -9,12 +9,14 @@ namespace ISP_253504_Zhak.Services
         public RateServise(HttpClient httpClient) 
         {
             _httpClient = httpClient;
+            
         }
 
         public async Task<IEnumerable<Rate>> GetRates(DateTime date)
         {
+            var BaseAdress = _httpClient.BaseAddress.AbsoluteUri;
             var formattedDate = date.ToString("yyyy-MM-dd");
-            var response = await _httpClient.GetAsync($"https://api.nbrb.by/exrates/rates?ondate={formattedDate}&periodicity=0");
+            var response = await _httpClient.GetAsync($"{BaseAdress}?ondate={formattedDate}&periodicity=0");
 
             if (response.IsSuccessStatusCode)
             {

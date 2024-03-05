@@ -11,9 +11,10 @@
         </Frame>
         
         <Frame HeightRequest="60" WidthRequest="300" Margin="0,0,0,10" HorizontalOptions="Center">
-            <Picker x:Name="CurrencyPicker" Title="Выберите валюту" HorizontalOptions="Center" HeightRequest="40"
+            <Picker x:Name="CurrencyPicker" Title="Выберите валюту" HorizontalOptions="Center" HeightRequest="40" HorizontalTextAlignment="Center"
             ItemsSource="{Binding rates}" 
             ItemDisplayBinding="{Binding Cur_Name}" 
+            
             SelectedIndexChanged="OnCurrencySelected">
             </Picker>
         </Frame>

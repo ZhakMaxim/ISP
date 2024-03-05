@@ -18,7 +18,7 @@ namespace ISP_253504_Zhak
             builder.Services.AddTransient<IDbService, SQLiteService>();
             builder.Services.AddTransient<ThirdLabPage>();
 
-            builder.Services.AddTransient<IRateServise, RateServise>();
+            //builder.Services.AddTransient<IRateServise, RateServise>();
             builder.Services.AddHttpClient<IRateServise, RateServise>(opt => opt.BaseAddress = new Uri("https://www.nbrb.by/api/exrates/rates"));
             builder.Services.AddTransient<FourthLabPage>();
 
