@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "c1/Fg5IoJgRWqEKRtyZBYdQLnp4HOPUc6YjLQN/j/kP/FtIft1kwGP+EAfNlkdUoQaYV7IVNem6ryUB8IoZwCA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MaxPl\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\MaxPl\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\MaxPl\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
