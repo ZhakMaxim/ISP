@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISP_253504_Zhak.MainPage"
+             Title="Calculator"
+             Background="#f5f5f5">
+
+
+ <Grid ColumnSpacing="4" RowSpacing="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition /> 
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label x:Name="CalculatingSpace" Text="" TextColor="Black" FontSize="80" HorizontalTextAlignment="End" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" />
+     
+        <Button x:Name="ZeroBtn" BackgroundColor="White" TextColor="Black" Text="0" Clicked="OnButtonClicked" FontSize="24" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Opacity="0.9"/>
+        <Button x:Name="OneBtn" BackgroundColor="White" TextColor="Black" Text="1" Clicked="OnButtonClicked" FontSize="24" Grid.Column="0" Grid.Row="5" Opacity="0.9"/>
+        <Button x:Name="TwoBtn" BackgroundColor="White" TextColor="Black" Text="2" Clicked="OnButtonClicked" FontSize="24" Grid.Column="1" Grid.Row="5" Opacity="0.9"/>
+        <Button x:Name="ThreeBtn" BackgroundColor="White" TextColor="Black" Text="3" Clicked="OnButtonClicked" FontSize="24" Grid.Column="2" Grid.Row="5" Opacity="0.9"/>
+        <Button x:Name="FourBtn" BackgroundColor="White" TextColor="Black" Text="4" Clicked="OnButtonClicked" FontSize="24" Grid.Column="0" Grid.Row="4" Opacity="0.9"/>
+        <Button x:Name="FiveBtn" BackgroundColor="White" TextColor="Black" Text="5" Clicked="OnButtonClicked" FontSize="24" Grid.Column="1" Grid.Row="4" Opacity="0.9"/>
+        <Button x:Name="SixBtn" BackgroundColor="White" TextColor="Black" Text="6" Clicked="OnButtonClicked" FontSize="24" Grid.Column="2" Grid.Row="4" Opacity="0.9"/>
+        <Button x:Name="SevenBtn" BackgroundColor="White" TextColor="Black" Text="7" Clicked="OnButtonClicked" FontSize="24" Grid.Column="0" Grid.Row="3" Opacity="0.9"/>
+        <Button x:Name="EightBtn" BackgroundColor="White" TextColor="Black" Text="8" Clicked="OnButtonClicked" FontSize="24" Grid.Column="1" Grid.Row="3" Opacity="0.9"/>
+        <Button x:Name="NineBtn" BackgroundColor="White" TextColor="Black" Text="9" Clicked="OnButtonClicked" FontSize="24" Grid.Column="2" Grid.Row="3" Opacity="0.9"/>
+
+        <Button x:Name="CommaBtn" BackgroundColor="White" TextColor="Black" Text="." Clicked="OnButtonClicked" FontSize="24" Grid.Column="2" Grid.Row="6" Opacity="0.9"/>
+        <Button x:Name="EqualBtn" BackgroundColor="#215072" TextColor="Black" Text="=" Clicked="OnButtonClicked" FontSize="24" Grid.Column="3" Grid.Row="6" Opacity="0.9"/>
+        <Button x:Name="PlusBtn" BackgroundColor="White" TextColor="Black" Text="+" Clicked="OnButtonClicked" FontSize="24" Grid.Column="3" Grid.Row="5" Opacity="0.9"/>
+        <Button x:Name="MultiplyBtn" BackgroundColor="White" TextColor="Black" Text="x" Clicked="OnButtonClicked" FontSize="24" Grid.Column="3" Grid.Row="3" Opacity="0.9"/>
+        <Button x:Name="MinusBtn" BackgroundColor="White" TextColor="Black" Text="-" Clicked="OnButtonClicked" FontSize="24" Grid.Column="3" Grid.Row="4" Opacity="0.9"/>
+        <Button x:Name="CEBtn" BackgroundColor="White" TextColor="Black" Text="CE" Clicked="OnButtonClicked" FontSize="24" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Opacity="0.9"/>
+        <Button x:Name="TwoPowerBtn" BackgroundColor="White" TextColor="Black" Text="2^x" Clicked="OnButtonClicked" FontSize="24" Grid.Column="2" Grid.Row="2" Opacity="0.9"/>
+        <Button x:Name="DivideBtn" BackgroundColor="White" TextColor="Black" Text="/" Clicked="OnButtonClicked" FontSize="24" Grid.Column="3" Grid.Row="2" Opacity="0.9"/>
+    </Grid>
+    
+</ContentPage>
