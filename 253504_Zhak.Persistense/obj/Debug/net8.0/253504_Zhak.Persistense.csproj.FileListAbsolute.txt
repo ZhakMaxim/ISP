@@ -1,0 +1,16 @@
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\bin\Debug\net8.0\253504_Zhak.Persistense.deps.json
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\bin\Debug\net8.0\253504_Zhak.Persistense.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\bin\Debug\net8.0\253504_Zhak.Persistense.pdb
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\bin\Debug\net8.0\253504_Zhak.Domain.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\bin\Debug\net8.0\253504_Zhak.Domain.pdb
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.csproj.AssemblyReference.cache
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.AssemblyInfoInputs.cache
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.AssemblyInfo.cs
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.csproj.CoreCompileInputs.cache
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.sourcelink.json
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.csproj.CopyComplete
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\refint\253504_Zhak.Persistense.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\253504_Zhak.Persistense.pdb
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Persistense\obj\Debug\net8.0\ref\253504_Zhak.Persistense.dll

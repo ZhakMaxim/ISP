@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:_253504_Zhak.UI.ViewModels"
+             x:DataType="models:AddNewBookViewModel"
+             x:Class="_253504_Zhak.UI.Pages.AddNewBookView"
+             Title="Add New Book">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Name"></Label>
+            <Entry Text="{Binding BookName}"></Entry>
+
+            <Label Text="Rate"></Label>
+            <Entry Text="{Binding BookRate}"></Entry>
+
+            <Button
+                Text="Save"
+                Command="{Binding Source={RelativeSource 
+                        AncestorType={x:Type models:AddNewBookViewModel}}, 
+                        Path=SaveNewBookCommand}">
+
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

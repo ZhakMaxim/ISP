@@ -15,9 +15,4 @@
     <ProjectReference Include="..\253504_Zhak.Domain\253504_Zhak.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="AuthorUseCase\Commands\" />
-    <Folder Include="AuthorUseCase\Queries\" />
-  </ItemGroup>
-
 </Project>

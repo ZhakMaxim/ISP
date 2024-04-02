@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace _253504_Zhak.Application.BookUseCase.Queries
 {
-    public sealed record GetBooksByAuthorRequest(string Id) : IRequest<IEnumerable<Book>>
+    public sealed record GetBooksByAuthorRequest(int Id) : IRequest<IEnumerable<Book>>
     { }
 }

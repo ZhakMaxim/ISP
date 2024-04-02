@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:_253504_Zhak.UI.ViewModels"
+             x:DataType="models:BookDetailsViewModel"
+             x:Class="_253504_Zhak.UI.Pages.BookDetails"
+             Title="BookDetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Text="Name: "
+                FontSize="15"
+                Padding="0,5,0,0">
+            </Label>
+            <Frame
+                BackgroundColor="Gray"
+                CornerRadius="10"
+                Padding="5"
+                HorizontalOptions="Fill">
+                <Entry
+                    Text="{Binding BookName}"
+                    FontSize="18"
+                    TextColor="White"
+                    IsReadOnly="{Binding IsReadOnly}" />
+            </Frame>
+            <Label
+                Text="Rate (0-100%): "
+                FontSize="15"
+                Padding="0,5,0,0">
+            </Label>
+            <Frame
+                BackgroundColor="Gray"
+                CornerRadius="10"
+                Padding="5"
+                HorizontalOptions="Fill">
+                <Entry
+                    Text="{Binding BookRate}"
+                    FontSize="18"
+                    TextColor="White"
+                    IsReadOnly="{Binding IsReadOnly}" />
+            </Frame>
+
+            <Label
+                Text="Project Id: "
+                FontSize="15"
+                Padding="0,5,0,0">
+            </Label>
+            <Frame
+                BackgroundColor="Gray"
+                CornerRadius="10"
+                Padding="5"
+                HorizontalOptions="Fill">
+                <Entry
+                    Text="{Binding BookAuthorId}"
+                    FontSize="18"
+                    TextColor="White"
+                    IsReadOnly="{Binding IsReadOnly}" />
+            </Frame>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button
+                    Grid.Column="0"
+                    Text="Edit"
+                    Command="{Binding Source={RelativeSource 
+                        AncestorType={x:Type models:BookDetailsViewModel}}, 
+                        Path=EditBookDetailsCommand}"
+                    Margin="5,5,0,0">
+
+                </Button>
+
+                <Button
+                    Grid.Column="1"
+                    Text="Save"
+                    Command="{Binding Source={RelativeSource 
+                        AncestorType={x:Type models:BookDetailsViewModel}}, 
+                        Path=SaveBookDetailsCommand}"
+                    Margin="5,5,5,0">
+
+                </Button>
+            </Grid>
+            <Button
+                Text="Delete"
+                Command="{Binding Source={RelativeSource 
+                        AncestorType={x:Type models:BookDetailsViewModel}}, 
+                        Path=DeleteAuthorTaskCommand}"
+                Margin="5,5,5,0">
+
+            </Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

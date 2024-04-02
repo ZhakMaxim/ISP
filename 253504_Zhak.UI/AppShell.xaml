@@ -4,12 +4,16 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:_253504_Zhak.UI"
-    Shell.FlyoutBehavior="Disabled"
-    Title="_253504_Zhak.UI">
+    Title="_253504_Zhak.UI"
+    xmlns:pages="clr-namespace:_253504_Zhak.UI.Pages">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    <ShellContent
+        Title="Authors list"
+        ContentTemplate="{DataTemplate pages:Authors}"
+        Route="Authors" />
 
 </Shell>

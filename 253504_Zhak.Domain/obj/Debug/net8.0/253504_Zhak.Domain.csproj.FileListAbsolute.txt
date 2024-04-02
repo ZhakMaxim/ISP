@@ -1,0 +1,12 @@
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\bin\Debug\net8.0\253504_Zhak.Domain.deps.json
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\bin\Debug\net8.0\253504_Zhak.Domain.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\bin\Debug\net8.0\253504_Zhak.Domain.pdb
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\253504_Zhak.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\253504_Zhak.Domain.AssemblyInfoInputs.cache
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\253504_Zhak.Domain.AssemblyInfo.cs
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\253504_Zhak.Domain.csproj.CoreCompileInputs.cache
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\253504_Zhak.Domain.sourcelink.json
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\253504_Zhak.Domain.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\refint\253504_Zhak.Domain.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\253504_Zhak.Domain.pdb
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Domain\obj\Debug\net8.0\ref\253504_Zhak.Domain.dll

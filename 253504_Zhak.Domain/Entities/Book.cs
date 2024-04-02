@@ -9,15 +9,22 @@ namespace _253504_Zhak.Domain.Entities
     public class Book : Entity
     {
         private Book() { }
-        public Book(BookAttributes attributes, double? rate = 0)
+        public Book(string title, double? rate = 0)
         {
-            Attributes = attributes;
+            Title = title;
             Rate = rate.Value;
         }
 
-        public BookAttributes Attributes { get; private set; }
-        public double Rate { get; private set; }
-        public int? AuthorId {  get; private set; }
+        public Book(string title, double rate, int? authorId)
+        {
+            Title = title;
+            Rate = rate;
+            AuthorId = authorId;
+        }
+
+        public string Title { get; set; }
+        public double Rate { get; set; }
+        public int? AuthorId {  get; set; }
 
         public void AddToAuthor(int authorId) 
         {

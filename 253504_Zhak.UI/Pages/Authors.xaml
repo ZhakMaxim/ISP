@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:_253504_Zhak.UI.ViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:DataType="models:AuthorsViewModel"
+             x:Class="_253504_Zhak.UI.Pages.Authors"
+             Title="Authors">
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior EventName="Loaded"
+                                        Command="{Binding UpdateAuthorListCommand}" />
+    </ContentPage.Behaviors>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Picker
+                BackgroundColor="White"
+                Margin="0,10,0,10"
+                WidthRequest="350"
+                TextColor="Black"
+                Title="select Author"
+                ItemsSource="{Binding AuthorsNames}"
+                SelectedItem="{Binding SelectedAuthorName}">
+                <Picker.Behaviors>
+                    <toolkit:EventToCommandBehavior EventName="SelectedIndexChanged"
+                                                    Command="{Binding UpdateBookListCommand}" />
+                </Picker.Behaviors>
+
+                <Picker.Shadow>
+                    <Shadow Brush="Black"
+                            Offset="1,1"
+                            Radius="10"
+                            Opacity="1" />
+                </Picker.Shadow>
+
+            </Picker>
+            <Image
+                Source="{Binding  SelectedAuthor.NameOfImageFile}"
+                HeightRequest="185"
+                Aspect="AspectFit" />
+            <ScrollView
+                HeightRequest="300">
+                <CollectionView
+                    ItemsSource="{Binding BookNames}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                Padding="10"
+                                HorizontalOptions="FillAndExpand"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                                <Label
+                                    Text="{Binding }"
+                                    TextColor="White"
+                                    Padding="10"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="50">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding Source={RelativeSource 
+                                    AncestorType={x:Type models:AuthorsViewModel}},
+                                    Path=ShowDetailsCommand}"
+                                            CommandParameter="{Binding .}" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Grid.Column="0"
+                    Text="Add Author"
+                    TextColor="White"
+                    FontSize="15"
+                    Command="{Binding Source={RelativeSource 
+                            AncestorType={x:Type models:AuthorsViewModel}},
+                            Path= AddNewAuthorCommand}"
+                    Margin="5,0,5,0">
+                </Button>
+
+                <Button
+                    Grid.Column="1"
+                    Text="Edit Author"
+                    TextColor="White"
+                    FontSize="15"
+                    Command="{Binding Source={RelativeSource 
+                             AncestorType={x:Type models:AuthorsViewModel}},
+                             Path= EditAuthorDataCommand}"
+                    Margin="0,0,5,0">
+                </Button>
+
+                <Button
+                    Grid.Column="2"
+                    Text="Add Book"
+                    TextColor="White"
+                    FontSize="15"
+                    Command="{Binding Source={RelativeSource 
+                            AncestorType={x:Type models:AuthorsViewModel}},
+                            Path= AddNewBookCommand}"
+                    Margin="0,0,5,0">
+                </Button>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

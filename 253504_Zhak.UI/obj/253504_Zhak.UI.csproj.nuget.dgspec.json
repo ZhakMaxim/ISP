@@ -4,6 +4,206 @@
     "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.UI\\253504_Zhak.UI.csproj": {}
   },
   "projects": {
+    "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj",
+        "projectName": "253504_Zhak.Application",
+        "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj",
+        "packagesPath": "C:\\Users\\MaxPl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MaxPl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj",
+        "projectName": "253504_Zhak.Domain",
+        "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj",
+        "packagesPath": "C:\\Users\\MaxPl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MaxPl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj",
+        "projectName": "253504_Zhak.Persistense",
+        "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj",
+        "packagesPath": "C:\\Users\\MaxPl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MaxPl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.UI\\253504_Zhak.UI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -36,19 +236,59 @@
         "frameworks": {
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj"
+              },
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj"
+              },
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj"
+              }
+            }
           },
           "net8.0-ios17.2": {
             "targetAlias": "net8.0-ios",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj"
+              },
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj"
+              },
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj"
+              }
+            }
           },
           "net8.0-maccatalyst17.2": {
             "targetAlias": "net8.0-maccatalyst",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj"
+              },
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj"
+              },
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj"
+              }
+            }
           },
           "net8.0-windows10.0.19041": {
             "targetAlias": "net8.0-windows10.0.19041.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Application\\253504_Zhak.Application.csproj"
+              },
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Domain\\253504_Zhak.Domain.csproj"
+              },
+              "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj": {
+                "projectPath": "C:\\Users\\MaxPl\\source\\repos\\253504_Zhak\\253504_Zhak.Persistense\\253504_Zhak.Persistense.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -61,17 +301,25 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.14, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.14, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -104,17 +352,25 @@
         "net8.0-ios17.2": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.14, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.14, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -147,17 +403,25 @@
         "net8.0-maccatalyst17.2": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.14, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.14, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -191,17 +455,25 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.14, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.14, )"
             }
           },
           "imports": [

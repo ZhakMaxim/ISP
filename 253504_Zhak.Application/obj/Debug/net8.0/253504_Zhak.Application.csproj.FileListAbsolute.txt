@@ -1,0 +1,16 @@
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\bin\Debug\net8.0\253504_Zhak.Application.deps.json
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\bin\Debug\net8.0\253504_Zhak.Application.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\bin\Debug\net8.0\253504_Zhak.Application.pdb
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\bin\Debug\net8.0\253504_Zhak.Domain.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\bin\Debug\net8.0\253504_Zhak.Domain.pdb
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.csproj.AssemblyReference.cache
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.AssemblyInfoInputs.cache
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.AssemblyInfo.cs
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.csproj.CoreCompileInputs.cache
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.sourcelink.json
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.csproj.CopyComplete
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\refint\253504_Zhak.Application.dll
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\253504_Zhak.Application.pdb
+C:\Users\MaxPl\source\repos\253504_Zhak\253504_Zhak.Application\obj\Debug\net8.0\ref\253504_Zhak.Application.dll

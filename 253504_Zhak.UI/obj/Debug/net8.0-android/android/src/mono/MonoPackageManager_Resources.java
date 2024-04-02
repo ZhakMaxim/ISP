@@ -3,7 +3,16 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "253504_Zhak.UI.dll" comes first in this list. */
 		"253504_Zhak.UI.dll",
+		"CommunityToolkit.Maui.dll",
+		"CommunityToolkit.Maui.Core.dll",
+		"CommunityToolkit.Mvvm.dll",
 		"GoogleGson.dll",
+		"MediatR.dll",
+		"MediatR.Contracts.dll",
+		"Microsoft.EntityFrameworkCore.dll",
+		"Microsoft.EntityFrameworkCore.Abstractions.dll",
+		"Microsoft.Extensions.Caching.Abstractions.dll",
+		"Microsoft.Extensions.Caching.Memory.dll",
 		"Microsoft.Extensions.Configuration.dll",
 		"Microsoft.Extensions.Configuration.Abstractions.dll",
 		"Microsoft.Extensions.DependencyInjection.dll",
@@ -136,6 +145,9 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Controls.resources.dll",
 		"Microsoft.Maui.Controls.resources.dll",
 		"Microsoft.Maui.Controls.resources.dll",
+		"253504_Zhak.Application.dll",
+		"253504_Zhak.Domain.dll",
+		"253504_Zhak.Persistense.dll",
 		"_Microsoft.Android.Resource.Designer.dll",
 	};
 	public static String[] Dependencies = new String[]{

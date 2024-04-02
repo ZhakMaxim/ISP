@@ -17,9 +17,7 @@ namespace _253504_Zhak.Persistense.Repository
                 for (int j = 0; j < 10; j++)
                 {
                     var trainee = new Book(
-                    new BookAttributes($"Book {k++}",
-                   DateTime.Now
-                   .AddYears(-Random.Shared.Next(30))),
+                    $"Book {k++}",
                     Random.Shared.NextDouble() * 10);
                     trainee.AddToAuthor(i);
                     _list.Add(trainee);

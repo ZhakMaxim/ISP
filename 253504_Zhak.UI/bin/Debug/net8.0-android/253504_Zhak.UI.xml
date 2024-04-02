@@ -4,5 +4,135 @@
         <name>253504_Zhak.UI</name>
     </assembly>
     <members>
+        <member name="T:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.saveNewProjectCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewProjectCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewProjectCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewProject"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.addProjectImageCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.AddProjectImageCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.AddProjectImageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.AddProjectImage"/>.</summary>
+        </member>
+        <member name="T:_253504_Zhak.UI.ViewModels.AddNewBookViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.saveNewbookCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewbookCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewbookCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewbook"/>.</summary>
+        </member>
+        <member name="T:_253504_Zhak.UI.ViewModels.AuthorsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.SelectedAuthor">
+            <inheritdoc cref="F:_253504_Zhak.UI.ViewModels.AuthorsViewModel.selectedAuthor"/>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AuthorsViewModel.updateAuthorListCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.UpdateAuthorListCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.UpdateAuthorListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AuthorsViewModel.UpdateAuthorList"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AuthorsViewModel.updateBookListCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.UpdateBookListCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.UpdateBookListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AuthorsViewModel.UpdateBookList"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AuthorsViewModel.showDetailsCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.ShowDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.ShowDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AuthorsViewModel.ShowDetails(System.String)"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AuthorsViewModel.addNewAuthorCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.AddNewAuthorCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.AddNewAuthorCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AuthorsViewModel.AddNewAuthor"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AuthorsViewModel.addNewBookCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.AddNewBookCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.AddNewBookCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AuthorsViewModel.AddNewBook"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AuthorsViewModel.editAuthorDataCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.EditAuthorDataCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AuthorsViewModel.EditAuthorDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AuthorsViewModel.EditAuthorData"/>.</summary>
+        </member>
+        <member name="T:_253504_Zhak.UI.ViewModels.BookDetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.editBookDetailsCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.EditBookDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.EditBookDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.EditBookDetails"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.saveBookDetailsCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.SaveBookDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.SaveBookDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.SaveBookDetails"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.deleteBookCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.DeleteBookCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.DeleteBookCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.BookDetailsViewModel.DeleteBook"/>.</summary>
+        </member>
+        <member name="T:_253504_Zhak.UI.ViewModels.EditAuthorViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.EditAuthorViewModel.saveEditedAuthorCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.EditAuthorViewModel.SaveEditedAuthorCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.EditAuthorViewModel.SaveEditedAuthorCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.EditAuthorViewModel.SaveEditedAuthor"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.EditAuthorViewModel.deleteEditedAuthorCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.EditAuthorViewModel.DeleteEditedAuthorCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.EditAuthorViewModel.DeleteEditedAuthorCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.EditAuthorViewModel.DeleteEditedAuthor"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedAuthor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedAuthor" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedAuthor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedAuthor" generated properties.</summary>
+        </member>
     </members>
 </doc>

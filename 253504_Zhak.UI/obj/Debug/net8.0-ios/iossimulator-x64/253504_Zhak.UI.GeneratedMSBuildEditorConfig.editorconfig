@@ -34,6 +34,36 @@ build_metadata.AdditionalFiles.ManifestResourceName = _253504_Zhak.UI.MainPage.x
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
+[C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Pages/AddNewAuthorView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _253504_Zhak.UI.Pages.AddNewAuthorView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\AddNewAuthorView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\AddNewAuthorView.xaml
+
+[C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Pages/AddNewBookView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _253504_Zhak.UI.Pages.AddNewBookView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\AddNewBookView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\AddNewBookView.xaml
+
+[C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Pages/Authors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _253504_Zhak.UI.Pages.Authors.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Authors.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Authors.xaml
+
+[C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Pages/BookDetails.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _253504_Zhak.UI.Pages.BookDetails.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\BookDetails.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\BookDetails.xaml
+
+[C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Pages/EditAuthorView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _253504_Zhak.UI.Pages.EditAuthorView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\EditAuthorView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\EditAuthorView.xaml
+
 [C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _253504_Zhak.UI.Resources.Styles.Colors.xaml
