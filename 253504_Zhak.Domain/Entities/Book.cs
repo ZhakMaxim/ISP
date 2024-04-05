@@ -9,11 +9,12 @@ namespace _253504_Zhak.Domain.Entities
     public class Book : Entity
     {
         private Book() { }
-        public Book(string title,  string nameOfImageFile, double? rate = 0)
+        public Book(string title,  string nameOfImageFile, int id, double? rate = 0)
         {
             Title = title;
             Rate = rate.Value;
             NameOfImageFile = nameOfImageFile;
+            Id = id;
         }
 
         public Book(string title, double rate, string nameOfImageFile, int? authorId)

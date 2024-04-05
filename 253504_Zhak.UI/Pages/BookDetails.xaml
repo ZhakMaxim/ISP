@@ -2,11 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:_253504_Zhak.UI.ViewModels"
+             xmlns:converters="clr-namespace:_253504_Zhak.UI"
+             xmlns:entities="clr-namespace:_253504_Zhak.Domain.Entities;assembly=253504_Zhak.Domain"
              x:DataType="models:BookDetailsViewModel"
              x:Class="_253504_Zhak.UI.Pages.BookDetails"
              Title="BookDetails">
+    <ContentPage.Resources>
+        <converters:IdToImageSourceConverter x:Key="IdToImageSource"/>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
+            <Image Source="{Binding SelectedBook.Id, Converter={StaticResource IdToImageSource}}"></Image>
             <Label
                 Text="Name: "
                 FontSize="15"
@@ -41,7 +47,7 @@
             </Frame>
 
             <Label
-                Text="Project Id: "
+                Text="Author Id: "
                 FontSize="15"
                 Padding="0,5,0,0">
             </Label>

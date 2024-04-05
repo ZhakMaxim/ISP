@@ -19,6 +19,7 @@ namespace _253504_Zhak.Persistense.Repository
                     var trainee = new Book(
                     $"Book {k++}",
                     "dotnet_bot.png",
+                    ++j,
                     Random.Shared.NextDouble() * 10
                     );
                     trainee.AddToAuthor(i);

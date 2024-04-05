@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _253504_Zhak.Application.AuthorUseCase.Commands
 {
-    public sealed record EditAuthorCommand(string Name, int SelectedAuthorId) : IRequest<Author>
+    public sealed record EditAuthorCommand(string Name, int Age, string WritingStyle, int SelectedAuthorId) : IRequest<Author>
     {
     }
 }

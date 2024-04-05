@@ -16,7 +16,7 @@ namespace _253504_Zhak.Application.BookUseCase.Commands
         }
         public async Task<Book> Handle(AddBookToAuthorCommand request, CancellationToken cancellationToken)
         {
-            Book newBook = new Book(request.Title, request.NameOfImage, request.Rate);
+            Book newBook = new Book(request.Title, request.NameOfImage, request.Id, request.Rate);
             newBook.AddToAuthor(request.AuthorId);
             await _unitOfWork.BookRepository.AddAsync(newBook);
             await _unitOfWork.SaveAllAsync();

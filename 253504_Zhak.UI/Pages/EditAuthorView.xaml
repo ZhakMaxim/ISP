@@ -9,6 +9,10 @@
         <StackLayout>
             <Label Text="Name"></Label>
             <Entry Text="{Binding AuthorName}"></Entry>
+            <Label Text="Age"></Label>
+            <Entry Text="{Binding AuthorAge}"></Entry>
+            <Label Text="Writing Style"></Label>
+            <Entry Text="{Binding AuthorWritingStyle}"></Entry>
 
             <Grid>
                 <Grid.ColumnDefinitions>

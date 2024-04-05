@@ -26,6 +26,22 @@ namespace _253504_Zhak.UI.ViewModels
             set { SetProperty(ref _authorName, value); }
         }
 
+        private int _authorAge;
+
+        public int AuthorAge
+        {
+            get { return _authorAge; }
+            set { SetProperty(ref _authorAge, value); }
+        }
+
+        private string _authorWritingStyle;
+
+        public string AuthorWritingStyle
+        {
+            get { return _authorWritingStyle; }
+            set { SetProperty(ref _authorWritingStyle, value); }
+        }
+
         public EditAuthorViewModel(IMediator mediator)
         {
             _mediator = mediator;
@@ -39,7 +55,7 @@ namespace _253504_Zhak.UI.ViewModels
 
         public async Task SaveAuthor()
         {
-            if (AuthorName != null)
+            if (AuthorName != null && AuthorAge != 0 && AuthorWritingStyle != null)
             {
                 _selectedAuthor.Name = AuthorName;
             }
@@ -48,7 +64,8 @@ namespace _253504_Zhak.UI.ViewModels
                 await App.Current.MainPage.Navigation.PopAsync();
                 return;
             }
-            await _mediator.Send(new EditAuthorCommand(AuthorName, _selectedAuthor.Id));
+            
+            await _mediator.Send(new EditAuthorCommand(AuthorName, AuthorAge, AuthorWritingStyle, _selectedAuthor.Id));
 
             await App.Current.MainPage.Navigation.PopAsync();
         }

@@ -20,6 +20,8 @@ namespace _253504_Zhak.UI.ViewModels
 
         private readonly IMediator _mediator;
 
+        public int LastAddedBookId { get; set; } = 30;
+
         private string _selectedAuthorName;
 
         public string SelectedAuthorName
@@ -136,7 +138,8 @@ namespace _253504_Zhak.UI.ViewModels
                 Console.WriteLine($"----------------------------------------------------> : {author.Name}");
                 var navigationParameter = new Dictionary<string, object>()
             {
-                { "SelectedAuthor", author }
+                { "SelectedAuthor", author },
+                { "LastAddedBookId", ++LastAddedBookId }
             };
                 await Shell.Current.GoToAsync(nameof(AddNewBookView), navigationParameter);
             }

@@ -12,7 +12,7 @@ namespace _253504_Zhak.UI
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             int id = (int)value;
-            string path = Path.Combine(FileSystem.AppDataDirectory, "Images", "Book");
+            string path = Path.Combine(FileSystem.AppDataDirectory, "Images");
             string fname = $"{id}.png";
             string imagePath = Path.Combine(path, fname);
             if (Path.Exists(imagePath))

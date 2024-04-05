@@ -17,6 +17,16 @@ namespace _253504_Zhak.UI
     {
         public static MauiApp CreateMauiApp()
         {
+            string imagesDir = System.IO.Path.Combine(FileSystem.AppDataDirectory, "Images");
+            if (Directory.Exists(imagesDir))
+            {
+                System.IO.Directory.Delete(imagesDir, true);
+                System.IO.Directory.CreateDirectory(imagesDir);
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(imagesDir);
+            }
 
             string settingsStream = "_253504_Zhak.UI.appsettings.json";
             string dataDirectory = FileSystem.Current.AppDataDirectory + "/";

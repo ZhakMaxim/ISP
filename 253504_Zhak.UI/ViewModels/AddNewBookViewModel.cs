@@ -6,9 +6,18 @@ using _253504_Zhak.Application.BookUseCase.Queries;
 namespace _253504_Zhak.UI.ViewModels
 {
     [QueryProperty(nameof(SelectedAuthor), "SelectedAuthor")]
+    [QueryProperty(nameof(LastAddedBookId), "LastAddedBookId")]
     public partial class AddNewBookViewModel : ObservableObject
     {
         private readonly IMediator _mediator;
+
+        private int _lastAddedBookId;
+
+        public int LastAddedBookId
+        {
+            get => _lastAddedBookId;
+            set => SetProperty(ref _lastAddedBookId, value);
+        }
 
         private Author _selectedAuthor;
 
@@ -56,12 +65,12 @@ namespace _253504_Zhak.UI.ViewModels
 
         public async Task SaveBook()
         {
-            var books = await _mediator.Send(new GetBooksByAuthorRequest(_selectedAuthor.Id));
-            if (_bookId.HasValue && _bookId.Value > books.Last().Id && _bookRate.HasValue && _bookRate.Value <= 10 && _bookRate.Value >= 0 &&
+            _bookId = LastAddedBookId;
+            if (_bookRate.HasValue && _bookRate.Value <= 10 && _bookRate.Value >= 0 &&
                 double.TryParse(_bookRate.ToString(), out double parsedbookRate) && _bookTitle.Length != 0)
             {
                 var newbook =
-                    await _mediator.Send(new AddBookToAuthorCommand(_bookTitle, _bookRate.Value, _imageName, _bookId.Value));
+                    await _mediator.Send(new AddBookToAuthorCommand(_bookTitle, _bookRate.Value, _imageName, LastAddedBookId, SelectedAuthor.Id));
             }
 
             await App.Current.MainPage.Navigation.PopAsync();
@@ -69,26 +78,23 @@ namespace _253504_Zhak.UI.ViewModels
 
         public async Task AddImage()
         {
+            _bookId = LastAddedBookId;
             if (MediaPicker.Default.IsCaptureSupported)
             {
                 FileResult photo = await MediaPicker.Default.PickPhotoAsync();
-
+                var books = await _mediator.Send(new GetBooksByAuthorRequest(_selectedAuthor.Id));
                 if (photo != null)
                 {
                     if (_bookId.HasValue)
                     {
-                        // save the file into local storage
-                        photo.FileName = $"photo_{_bookId.Value}.png";
-                        string localFilePath =
-                            Path.Combine(
-                                "C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Resources/Images",
-                                photo.FileName);
+                        using var stream = await photo.OpenReadAsync();
+                        photo.FileName = $"{_bookId.Value}.png";
+                        string localFilePath = Path.Combine(FileSystem.AppDataDirectory, "Images", $"{_bookId.Value}.png");
                         _imageName = photo.FileName;
-
-                        using Stream sourceStream = await photo.OpenReadAsync();
-                        using FileStream localFileStream = File.OpenWrite(localFilePath);
-
-                        await sourceStream.CopyToAsync(localFileStream);
+                        using var fileStream = File.Create(localFilePath);
+                        stream.Seek(0, SeekOrigin.Begin);
+                        stream.CopyTo(fileStream);
+                        stream.Seek(0, SeekOrigin.Begin);
                     }
                 }
             }

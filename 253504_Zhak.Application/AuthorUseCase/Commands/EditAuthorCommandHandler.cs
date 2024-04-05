@@ -21,6 +21,8 @@ namespace _253504_Zhak.Application.AuthorUseCase.Commands
                 await _unitOfWork.AuthorRepository.GetByIdAsync(request.SelectedAuthorId, cancellationToken);
 
             existingAuthor.Name = request.Name;
+            existingAuthor.Age = request.Age;
+            existingAuthor.WritingStyle = request.WritingStyle;
             existingAuthor.Id = request.SelectedAuthorId;
 
             await _unitOfWork.AuthorRepository.UpdateAsync(existingAuthor, cancellationToken);

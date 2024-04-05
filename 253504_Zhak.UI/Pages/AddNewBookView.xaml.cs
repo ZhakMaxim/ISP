@@ -4,7 +4,7 @@ namespace _253504_Zhak.UI.Pages;
 
 public partial class AddNewBookView : ContentPage
 {
-	public AddNewBookView(AddNewAuthorViewModel viewModel)
+	public AddNewBookView(AddNewBookViewModel viewModel)
 	{
 		InitializeComponent();
         this.BindingContext = viewModel;
