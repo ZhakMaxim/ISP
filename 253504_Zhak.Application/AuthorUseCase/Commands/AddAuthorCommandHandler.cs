@@ -17,7 +17,7 @@ namespace _253504_Zhak.Application.AuthorUseCase.Commands
 
         public async Task<Author> Handle(AddAuthorCommand request, CancellationToken cancellationToken)
         {
-            Author newAuthor = new Author(request.Name, request.Age, request.WritingStyle, request.NameOfImage, request.Id);
+            Author newAuthor = new Author(request.Name, request.Age, request.WritingStyle, request.Id);
 
             await _unitOfWork.AuthorRepository.AddAsync(newAuthor);
             await _unitOfWork.SaveAllAsync();

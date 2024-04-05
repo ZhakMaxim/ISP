@@ -90,13 +90,13 @@ namespace _253504_Zhak.UI.ViewModels
 
         public async Task SaveBook()
         {
-            var projects = await _mediator.Send(new GetAllAuthorsRequest());
-            if (BookName.Length != 0 && BookRate.HasValue && BookRate.Value >= 0 && BookRate.Value <= 100 &&
-                BookAuthorId.Value < projects.Last().Id &&
+            var authors = await _mediator.Send(new GetAllAuthorsRequest());
+            if (BookName.Length != 0 && BookRate.HasValue && BookRate.Value >= 0 && BookRate.Value <= 10 &&
+                BookAuthorId.Value < authors.Last().Id &&
                 BookAuthorId.Value > 0)
             {
                 await _mediator.Send(new EditBookCommand(BookName, BookRate.Value, _selectedBook.Id));
-                var movedProjectBook =
+                var movedBook =
                     await _mediator.Send(
                         new MoveBookToAuthorCommand(BookName, BookRate.Value, _selectedBook.Id, BookAuthorId.Value));
             }
@@ -106,7 +106,6 @@ namespace _253504_Zhak.UI.ViewModels
 
         public async Task DeleteBook_()
         {
-            Console.WriteLine("tapped delete book");
             var deleteBook = await _mediator.Send(new DeleteBookCommand(_selectedBook.Id));
             await App.Current.MainPage.Navigation.PopAsync();
         }

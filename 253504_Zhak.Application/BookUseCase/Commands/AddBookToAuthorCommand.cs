@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace _253504_Zhak.Application.BookUseCase.Commands
 {
-    public sealed record AddBookToAuthorCommand(string Title, double Rate, int AuthorId) : IRequest<Book>
+    public sealed record AddBookToAuthorCommand(string Title, double Rate, string NameOfImage,int AuthorId) : IRequest<Book>
     { }
 }

@@ -1,18 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using _253504_Zhak.Application.AuthorUseCase.Commands;
-using _253504_Zhak.Application.AuthorUseCase.Queries;
-using _253504_Zhak.Application.BookUseCase.Commands;
-using _253504_Zhak.Application.BookUseCase.Queries;
+
 
 namespace _253504_Zhak.UI.ViewModels
 {
-    [QueryProperty(nameof(SelectedAuthor), "SelectedProject")]
+    [QueryProperty(nameof(SelectedAuthor), "SelectedAuthor")]
     public partial class EditAuthorViewModel : ObservableObject
     {
         private readonly IMediator _mediator;
@@ -50,6 +43,12 @@ namespace _253504_Zhak.UI.ViewModels
             {
                 _selectedAuthor.Name = AuthorName;
             }
+            else 
+            {
+                await App.Current.MainPage.Navigation.PopAsync();
+                return;
+            }
+            await _mediator.Send(new EditAuthorCommand(AuthorName, _selectedAuthor.Id));
 
             await App.Current.MainPage.Navigation.PopAsync();
         }

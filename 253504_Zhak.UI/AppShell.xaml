@@ -6,12 +6,15 @@
     xmlns:local="clr-namespace:_253504_Zhak.UI"
     Title="_253504_Zhak.UI"
     xmlns:pages="clr-namespace:_253504_Zhak.UI.Pages">
-
+    
     <ShellContent
+        Icon="home.png"
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    
     <ShellContent
+        Icon="list.png"
         Title="Authors list"
         ContentTemplate="{DataTemplate pages:Authors}"
         Route="Authors" />

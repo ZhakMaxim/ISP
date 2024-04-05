@@ -14,7 +14,11 @@ namespace _253504_Zhak.Persistense
     {
         public static IServiceCollection AddPersistence(this IServiceCollection services)
         {
-            services.AddSingleton<IUnitOfWork, FakeUnitOfWork>();
+            //services.AddSingleton<IUnitOfWork, EfUnitOfWork>();
+            services.AddScoped<IUnitOfWork, EfUnitOfWork>();
+            services.AddTransient<IRepository<Author>, EfRepository<Author>>();
+            services.AddTransient<IRepository<Book>, EfRepository<Book>>();
+            services.AddScoped<AppDbContext>();
             return services;
         }
         public static IServiceCollection AddPersistence(this IServiceCollection services, DbContextOptions options)

@@ -16,19 +16,17 @@ namespace _253504_Zhak.Domain.Entities
             Age = age;
             WritingStyle = writingStyle;
         }
-        public Author(string name, int age, string writingStyle, string nameOfimageFile, int id) 
+
+        public Author(string name, int age, string writingStyle, int id) 
         {
             Name = name;
             Age = age;
             WritingStyle = writingStyle;
-            NameOfImageFile = nameOfimageFile;
             Id = id;
         }
 
         public string Name { get; set; }
         public int Age { get; set; }
-
-        public string NameOfImageFile { get; set; } = "dotnet_bot.png";
 
         public string WritingStyle { get; set; }        //expository, persuasive, narrative, descriptive and creative.
 

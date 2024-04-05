@@ -1,12 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _253504_Zhak.Application.AuthorUseCase.Commands;
-using _253504_Zhak.Application.AuthorUseCase.Queries;
 using _253504_Zhak.Application.BookUseCase.Commands;
 using _253504_Zhak.Application.BookUseCase.Queries;
 
@@ -17,11 +10,6 @@ namespace _253504_Zhak.UI.ViewModels
     {
         private readonly IMediator _mediator;
 
-        public AddNewBookViewModel(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
-
         private Author _selectedAuthor;
 
         public Author SelectedAuthor
@@ -30,35 +18,80 @@ namespace _253504_Zhak.UI.ViewModels
             set => SetProperty(ref _selectedAuthor, value);
         }
 
-        private string _bookName;
+        private string _imageName { get; set; } = "dotnet_bot.png";
 
-        public string BookName
+        public AddNewBookViewModel(IMediator mediator)
         {
-            get { return _bookName; }
-            set { SetProperty(ref _bookName, value); }
+            _mediator = mediator;
         }
 
-        private int? _bookRate;
+        private string _bookTitle;
 
-        public int? BookRate
+        public string BookTitle
+        {
+            get { return _bookTitle; }
+            set { SetProperty(ref _bookTitle, value); }
+        }
+
+        private double? _bookRate;
+
+        public double? BookRate
         {
             get { return _bookRate; }
             set { SetProperty(ref _bookRate, value); }
         }
 
-        [RelayCommand]
-        async Task SaveNewbook() => await Savebook();
-
-        public async Task Savebook()
+        private int? _bookId;
+        public int? BookId
         {
-            if (_bookRate.HasValue && _bookRate.Value <= 100 && _bookRate.Value >= 0 &&
-                int.TryParse(_bookRate.ToString(), out int parsedbookRate) && _bookName.Length != 0)
+            get { return _bookId; }
+            set { SetProperty(ref _bookId, value); }
+        }
+
+        [RelayCommand]
+        async Task SaveNewBook() => await SaveBook();
+
+        [RelayCommand]
+        async Task AddBookImage() => await AddImage();
+
+        public async Task SaveBook()
+        {
+            var books = await _mediator.Send(new GetBooksByAuthorRequest(_selectedAuthor.Id));
+            if (_bookId.HasValue && _bookId.Value > books.Last().Id && _bookRate.HasValue && _bookRate.Value <= 10 && _bookRate.Value >= 0 &&
+                double.TryParse(_bookRate.ToString(), out double parsedbookRate) && _bookTitle.Length != 0)
             {
                 var newbook =
-                    await _mediator.Send(new AddBookToAuthorCommand(_bookName, _bookRate.Value, SelectedAuthor.Id));
+                    await _mediator.Send(new AddBookToAuthorCommand(_bookTitle, _bookRate.Value, _imageName, _bookId.Value));
             }
 
             await App.Current.MainPage.Navigation.PopAsync();
+        }
+
+        public async Task AddImage()
+        {
+            if (MediaPicker.Default.IsCaptureSupported)
+            {
+                FileResult photo = await MediaPicker.Default.PickPhotoAsync();
+
+                if (photo != null)
+                {
+                    if (_bookId.HasValue)
+                    {
+                        // save the file into local storage
+                        photo.FileName = $"photo_{_bookId.Value}.png";
+                        string localFilePath =
+                            Path.Combine(
+                                "C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Resources/Images",
+                                photo.FileName);
+                        _imageName = photo.FileName;
+
+                        using Stream sourceStream = await photo.OpenReadAsync();
+                        using FileStream localFileStream = File.OpenWrite(localFilePath);
+
+                        await sourceStream.CopyToAsync(localFileStream);
+                    }
+                }
+            }
         }
     }
 }

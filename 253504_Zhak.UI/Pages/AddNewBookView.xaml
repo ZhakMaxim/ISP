@@ -8,18 +8,31 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Name"></Label>
-            <Entry Text="{Binding BookName}"></Entry>
+            <Entry Text="{Binding BookTitle}"></Entry>
 
             <Label Text="Rate"></Label>
             <Entry Text="{Binding BookRate}"></Entry>
 
+            <Label Text="Id"></Label>
+            <Entry Text="{Binding BookId}"></Entry>
+
             <Button
                 Text="Save"
                 Command="{Binding Source={RelativeSource 
+                    AncestorType={x:Type models:AddNewBookViewModel}}, 
+                    Path=SaveNewBookCommand}">
+            </Button>
+
+            <Button
+                Text="Add image"
+                Command="{Binding Source={RelativeSource 
                         AncestorType={x:Type models:AddNewBookViewModel}}, 
-                        Path=SaveNewBookCommand}">
+                        Path=AddBookImageCommand}"
+                Margin="0,5,0,5">
+
 
             </Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _253504_Zhak.Persistense.Repository
 {
-    public abstract class FakeAuthorRepository : IRepository<Author>
+    public class FakeAuthorRepository : IRepository<Author>
     {
         List<Author> _authors;
         public FakeAuthorRepository() 
@@ -27,13 +27,35 @@ namespace _253504_Zhak.Persistense.Repository
             return await Task.Run(() => _authors);
         }
 
-        public abstract Task<Author> GetByIdAsync(int id, CancellationToken cancellationToken = default,
-           params Expression<Func<Author, object>>[]? includesProperties);
-        public abstract Task<IReadOnlyList<Author>> ListAsync(Expression<Func<Author, bool>> filter, CancellationToken cancellationToken = default,
-            params Expression<Func<Author, object>>[]? includesProperties);
-        public abstract Task AddAsync(Author entity, CancellationToken cancellationToken = default);
-        public abstract Task UpdateAsync(Author entity, CancellationToken cancellationToken = default);
-        public abstract Task DeleteAsync(Author entity, CancellationToken cancellationToken = default);
-        public abstract Task<Author> FirstOrDefaultAsync(Expression<Func<Author, bool>> filter, CancellationToken cancellationToken = default);
+        public Task<Author> GetByIdAsync(int id, CancellationToken cancellationToken = default, params Expression<Func<Author, object>>[]? includesProperties)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IReadOnlyList<Author>> ListAsync(Expression<Func<Author, bool>> filter, CancellationToken cancellationToken = default,
+            params Expression<Func<Author, object>>[]? includesProperties)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddAsync(Author entity, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(Author entity, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Author entity, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Author> FirstOrDefaultAsync(Expression<Func<Author, bool>> filter, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

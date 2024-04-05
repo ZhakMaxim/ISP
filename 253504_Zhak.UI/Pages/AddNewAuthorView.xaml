@@ -18,6 +18,30 @@
                 </Entry>
             </Frame>
 
+            <Label Text="Age"></Label>
+            <Frame
+                BackgroundColor="LightGray"
+                CornerRadius="10"
+                Padding="5"
+                HorizontalOptions="Fill">
+                <Entry
+                    Text="{Binding AuthorAge}"
+                    Margin="5,0,5,5">
+                </Entry>
+            </Frame>
+
+            <Label Text="Writing Style"></Label>
+            <Frame
+                BackgroundColor="LightGray"
+                CornerRadius="10"
+                Padding="5"
+                HorizontalOptions="Fill">
+                <Entry
+                    Text="{Binding AuthorWritingStyle}"
+                    Margin="5,0,5,5">
+                </Entry>
+            </Frame>
+
             <Label Text="Id"></Label>
             <Frame
                 BackgroundColor="LightGray"
@@ -30,15 +54,7 @@
                 </Entry>
             </Frame>
 
-            <Button
-                Text="Add image"
-                Command="{Binding Source={RelativeSource 
-                        AncestorType={x:Type models:AddNewAuthorViewModel}}, 
-                        Path=AddAuthorImageCommand}"
-                Margin="5,5,5,5">
 
-
-            </Button>
 
             <Button
                 Text="Save"

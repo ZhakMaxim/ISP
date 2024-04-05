@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _253504_Zhak.Persistense.Repository
 {
-    public abstract class FakeBookRepository : IRepository<Book>
+    public class FakeBookRepository : IRepository<Book>
     {
         List<Book> _list = new List<Book>();
         public FakeBookRepository()
@@ -18,24 +18,47 @@ namespace _253504_Zhak.Persistense.Repository
                 {
                     var trainee = new Book(
                     $"Book {k++}",
-                    Random.Shared.NextDouble() * 10);
+                    "dotnet_bot.png",
+                    Random.Shared.NextDouble() * 10
+                    );
                     trainee.AddToAuthor(i);
                     _list.Add(trainee);
                 }
         }
-        public async Task<IReadOnlyList<Book>> ListAsync(Expression<Func<Book, bool>> filter, CancellationToken cancellationToken = default, 
+        public Task<Book> GetByIdAsync(int id, CancellationToken cancellationToken = default, params Expression<Func<Book, object>>[]? includesProperties)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IReadOnlyList<Book>> ListAllAsync(CancellationToken cancellationToken = default)
+        {
+            return await Task.Run(() => _list);
+        }
+
+        public Task<IReadOnlyList<Book>> ListAsync(Expression<Func<Book, bool>> filter, CancellationToken cancellationToken = default,
             params Expression<Func<Book, object>>[]? includesProperties)
         {
-            var data = _list.AsQueryable();
-            return data.Where(filter).ToList();
+            throw new NotImplementedException();
         }
-        public abstract Task<IReadOnlyList<Book>> ListAllAsync(CancellationToken cancellationToken = default);
-        
-        public abstract Task<Book> GetByIdAsync(int id, CancellationToken cancellationToken = default,
-           params Expression<Func<Book, object>>[]? includesProperties);
-        public abstract Task AddAsync(Book entity, CancellationToken cancellationToken = default);
-        public abstract Task UpdateAsync(Book entity, CancellationToken cancellationToken = default);
-        public abstract Task DeleteAsync(Book entity, CancellationToken cancellationToken = default);
-        public abstract Task<Book> FirstOrDefaultAsync(Expression<Func<Book, bool>> filter, CancellationToken cancellationToken = default);
+
+        public Task AddAsync(Book entity, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(Book entity, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Book entity, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Book> FirstOrDefaultAsync(Expression<Func<Book, bool>> filter, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

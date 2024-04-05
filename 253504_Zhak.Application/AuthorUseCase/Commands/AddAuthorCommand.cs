@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace _253504_Zhak.Application.AuthorUseCase.Commands
 {
-    public sealed record AddAuthorCommand(string Name, int Age, string WritingStyle, string NameOfImage, int Id) : IRequest<Author>;
+    public sealed record AddAuthorCommand(string Name, int Age, string WritingStyle, int Id) : IRequest<Author>;
 }

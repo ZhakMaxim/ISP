@@ -17,6 +17,7 @@ namespace _253504_Zhak.UI.ViewModels
 {
     public partial class AuthorsViewModel: ObservableObject
     {
+
         private readonly IMediator _mediator;
 
         private string _selectedAuthorName;
@@ -43,17 +44,19 @@ namespace _253504_Zhak.UI.ViewModels
         {
             GetAuthors();
             _mediator = mediator;
+
         }
 
         public ObservableCollection<Author> Authors { get; set; } = new();
         public ObservableCollection<string> AuthorsNames { get; set; } = new();
         public ObservableCollection<Book> Books { get; set; } = new();
         public ObservableCollection<string> BookNames { get; set; } = new();
+      
 
-        // Chosen Author in list
-        [ObservableProperty] public Author selectedAuthor;
+        [ObservableProperty] 
 
-        // Command fot update Authors list
+        public Author selectedAuthor;
+
         [RelayCommand]
         async Task UpdateAuthorList() => await GetAuthors();
 
@@ -118,28 +121,27 @@ namespace _253504_Zhak.UI.ViewModels
                 { "SelectedBook", book }
             };
                 await Shell.Current.GoToAsync(nameof(BookDetails), navigationParameter);
-            }
+            };
         }
 
         public async Task AddAuthor()
         {
             await Shell.Current.GoToAsync(nameof(AddNewAuthorView));
-            await GetAuthors();
         }
         public async Task AddBook()
         {
             var author = Authors.FirstOrDefault(author => author.Name == SelectedAuthorName);
             if (author != null)
             {
-                Console.WriteLine(author);
+                Console.WriteLine($"----------------------------------------------------> : {author.Name}");
                 var navigationParameter = new Dictionary<string, object>()
             {
-                { "SelectedProject", author }
+                { "SelectedAuthor", author }
             };
                 await Shell.Current.GoToAsync(nameof(AddNewBookView), navigationParameter);
             }
 
-            await GetBooks();
+            
         }
 
         public async Task EditAuthor()
@@ -150,10 +152,12 @@ namespace _253504_Zhak.UI.ViewModels
                 Console.WriteLine(author);
                 var navigationParameter = new Dictionary<string, object>()
             {
-                { "SelectedProject", author }
+                { "SelectedAuthor", author }
             };
                 await Shell.Current.GoToAsync(nameof(EditAuthorView), navigationParameter);
+
             }
         }
+
     }
 }

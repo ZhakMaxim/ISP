@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:_253504_Zhak.UI.ViewModels"
+             xmlns:converters="clr-namespace:_253504_Zhak.UI"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:entities="clr-namespace:_253504_Zhak.Domain.Entities;assembly=253504_Zhak.Domain"
              x:DataType="models:AuthorsViewModel"
              x:Class="_253504_Zhak.UI.Pages.Authors"
              Title="Authors">
@@ -10,11 +12,14 @@
         <toolkit:EventToCommandBehavior EventName="Loaded"
                                         Command="{Binding UpdateAuthorListCommand}" />
     </ContentPage.Behaviors>
+    <ContentPage.Resources>
+        <converters:IdToImageSourceConverter x:Key="IdToImageSource"/>
+    </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Spacing="5">
 
-            <Picker
+            <Picker 
                 BackgroundColor="White"
                 Margin="0,10,0,10"
                 WidthRequest="350"
@@ -25,6 +30,8 @@
                 <Picker.Behaviors>
                     <toolkit:EventToCommandBehavior EventName="SelectedIndexChanged"
                                                     Command="{Binding UpdateBookListCommand}" />
+                    <toolkit:EventToCommandBehavior EventName="Focused"
+                                    Command="{Binding UpdateAuthorListCommand}" />
                 </Picker.Behaviors>
 
                 <Picker.Shadow>
@@ -35,41 +42,51 @@
                 </Picker.Shadow>
 
             </Picker>
-            <Image
-                Source="{Binding  SelectedAuthor.NameOfImageFile}"
-                HeightRequest="185"
-                Aspect="AspectFit" />
+
+            <Frame CornerRadius="0"  Margin="5,0,5,0">
+                <Label FontFamily="Lobster">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Writing Style: " FontAttributes="Bold" />
+                            <Span Text="{Binding SelectedAuthor.WritingStyle}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
             <ScrollView
                 HeightRequest="300">
                 <CollectionView
-                    ItemsSource="{Binding BookNames}">
+                ItemsSource="{Binding Books}"
+                HeightRequest="400">
                     <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Frame
-                                BackgroundColor="Gray"
-                                CornerRadius="10"
-                                Padding="10"
-                                HorizontalOptions="FillAndExpand"
-                                HeightRequest="50"
+                        <DataTemplate x:DataType="entities:Book">
+                            <Frame CornerRadius="10" Padding="10" 
+                                HorizontalOptions="FillAndExpand" 
                                 VerticalOptions="Center">
-                                <Label
-                                    Text="{Binding }"
-                                    TextColor="White"
-                                    Padding="10"
-                                    HorizontalOptions="FillAndExpand"
-                                    HeightRequest="50">
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer
-                                            Command="{Binding Source={RelativeSource 
+                                <HorizontalStackLayout>
+                                    <Image
+                                    Aspect="AspectFill"
+                                    HeightRequest="70"
+                                    WidthRequest="70"
+                                Source="{Binding Id, Converter={StaticResource IdToImageSource}}"></Image>
+                                    <Label Text="{Binding Title}" 
+                                        Padding="10"
+                                        HorizontalOptions="FillAndExpand"
+                                        HeightRequest="50">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                Command="{Binding Source={RelativeSource 
                                     AncestorType={x:Type models:AuthorsViewModel}},
                                     Path=ShowDetailsCommand}"
-                                            CommandParameter="{Binding .}" />
-                                    </Label.GestureRecognizers>
-                                </Label>
+                                CommandParameter="{Binding Title}" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </HorizontalStackLayout>
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
+
             </ScrollView>
 
 

@@ -6,28 +6,28 @@
     <members>
         <member name="T:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel">
             <inheritdoc/>
-            <inheritdoc/>
         </member>
-        <member name="F:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.saveNewProjectCommand">
-            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewProjectCommand"/>.</summary>
+        <member name="F:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.saveNewAuthorCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewAuthorCommand"/>.</summary>
         </member>
-        <member name="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewProjectCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewProject"/>.</summary>
-        </member>
-        <member name="F:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.addProjectImageCommand">
-            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.AddProjectImageCommand"/>.</summary>
-        </member>
-        <member name="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.AddProjectImageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.AddProjectImage"/>.</summary>
+        <member name="P:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewAuthorCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewAuthorViewModel.SaveNewAuthor"/>.</summary>
         </member>
         <member name="T:_253504_Zhak.UI.ViewModels.AddNewBookViewModel">
             <inheritdoc/>
+            <inheritdoc/>
         </member>
-        <member name="F:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.saveNewbookCommand">
-            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewbookCommand"/>.</summary>
+        <member name="F:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.saveNewBookCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewBookCommand"/>.</summary>
         </member>
-        <member name="P:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewbookCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewbook"/>.</summary>
+        <member name="P:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewBookCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.SaveNewBook"/>.</summary>
+        </member>
+        <member name="F:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.addBookImageCommand">
+            <summary>The backing field for <see cref="P:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.AddBookImageCommand"/>.</summary>
+        </member>
+        <member name="P:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.AddBookImageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_253504_Zhak.UI.ViewModels.AddNewBookViewModel.AddBookImage"/>.</summary>
         </member>
         <member name="T:_253504_Zhak.UI.ViewModels.AuthorsViewModel">
             <inheritdoc/>

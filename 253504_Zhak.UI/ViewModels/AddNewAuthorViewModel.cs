@@ -1,14 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using _253504_Zhak.Application.AuthorUseCase.Commands;
 using _253504_Zhak.Application.AuthorUseCase.Queries;
-using _253504_Zhak.Application.BookUseCase.Commands;
-using _253504_Zhak.Application.BookUseCase.Queries;
+
 
 namespace _253504_Zhak.UI.ViewModels
 {
@@ -16,7 +10,7 @@ namespace _253504_Zhak.UI.ViewModels
     {
         private readonly IMediator _mediator;
 
-        private string _imageName { get; set; } = "dotnet_bot.png";
+        //private string _imageName { get; set; } = "dotnet_bot.png";
 
         private string _authorName;
 
@@ -49,26 +43,26 @@ namespace _253504_Zhak.UI.ViewModels
         }
 
         [RelayCommand]
-        async Task SaveNewProject() => await SaveProject();
+        async Task SaveNewAuthor() => await SaveAuthor();
 
-        [RelayCommand]
-        async Task AddProjectImage() => await AddImage();
+        /*[RelayCommand]
+        async Task AddAuthorImage() => await AddImage();*/
 
         public AddNewAuthorViewModel(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        public async Task SaveProject()
+        public async Task SaveAuthor()
         {
-            var projects = await _mediator.Send(new GetAllAuthorsRequest());
-            if (_authorId.HasValue && _authorId.Value > projects.Last().Id && int.TryParse(_authorId.ToString(), out int parsedAuthorId))
+            var authors = await _mediator.Send(new GetAllAuthorsRequest());
+            if (_authorId.HasValue && _authorId.Value > authors.Last().Id && int.TryParse(_authorId.ToString(), out int parsedAuthorId))
             {
-                var newProject = await _mediator.Send(new AddAuthorCommand(_authorName, _authorAge, _authorWritingStyle, _imageName, _authorId.Value));
+                var newAuthor = await _mediator.Send(new AddAuthorCommand(_authorName, _authorAge, _authorWritingStyle, _authorId.Value));
             }
-            await App.Current.MainPage.Navigation.PopAsync();
+            await App.Current.MainPage.Navigation.PopAsync();                                                                                                                                                                                                                                                
         }
-        public async Task AddImage()
+       /* public async Task AddImage()
         {
             if (MediaPicker.Default.IsCaptureSupported)
             {
@@ -82,7 +76,7 @@ namespace _253504_Zhak.UI.ViewModels
                         photo.FileName = $"photo_{_authorId.Value}.jpeg";
                         string localFilePath =
                             Path.Combine(
-                                "/Users/egorkazarin/RiderProjects/253504_Kazarin/253504_Kazarin.UI/Resources/Images",
+                                "C:/Users/MaxPl/source/repos/253504_Zhak/253504_Zhak.UI/Resources/Images",
                                 photo.FileName);
                         _imageName = photo.FileName;
 
@@ -93,6 +87,6 @@ namespace _253504_Zhak.UI.ViewModels
                     }
                 }
             }
-        }
+        }*/
     }
 }
