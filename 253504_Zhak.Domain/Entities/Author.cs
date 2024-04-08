@@ -25,14 +25,31 @@ namespace _253504_Zhak.Domain.Entities
             Id = id;
         }
 
-        public string Name { get; set; }
-        public int Age { get; set; }
+        public string Name { get; private set; }
+        public int Age { get; private set; }
 
-        public string WritingStyle { get; set; }        //expository, persuasive, narrative, descriptive and creative.
+        public string WritingStyle { get; private set; }        //expository, persuasive, narrative, descriptive and creative.
 
         public IReadOnlyList<Book> Books
         {
             get => _books.AsReadOnly();
+        }
+        
+        public void ChangeName(string name) 
+        {
+            if(name != null) 
+                Name = name;
+        }
+
+        public void ChangeAge(int age) 
+        {
+            Age = age;
+        }
+
+        public void ChangeWritingStyle(string writingStyle) 
+        {
+            if (writingStyle != null)
+                WritingStyle = writingStyle;
         }
 
     }

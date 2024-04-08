@@ -57,7 +57,7 @@ namespace _253504_Zhak.UI.ViewModels
         {
             if (AuthorName != null && AuthorAge != 0 && AuthorWritingStyle != null)
             {
-                _selectedAuthor.Name = AuthorName;
+                _selectedAuthor.ChangeName(AuthorName);
             }
             else 
             {

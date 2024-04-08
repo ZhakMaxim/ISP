@@ -7,6 +7,7 @@ namespace _253504_Zhak.UI.ViewModels
 {
     [QueryProperty(nameof(SelectedAuthor), "SelectedAuthor")]
     [QueryProperty(nameof(LastAddedBookId), "LastAddedBookId")]
+
     public partial class AddNewBookViewModel : ObservableObject
     {
         private readonly IMediator _mediator;

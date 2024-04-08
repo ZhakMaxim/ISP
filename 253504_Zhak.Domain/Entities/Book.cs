@@ -25,11 +25,11 @@ namespace _253504_Zhak.Domain.Entities
             AuthorId = authorId;
         }
 
-        public string Title { get; set; }
-        public double Rate { get; set; }
+        public string Title { get; private set; }
+        public double Rate { get; private set; }
 
-        public string NameOfImageFile { get; set; } = "dotnet_bot.png";
-        public int? AuthorId {  get; set; }
+        public string NameOfImageFile { get; private set; } = "dotnet_bot.png";
+        public int? AuthorId {  get; private set; }
 
         public void AddToAuthor(int authorId) 
         {
@@ -44,6 +44,12 @@ namespace _253504_Zhak.Domain.Entities
         {
             if (rate < 0 || rate > 10) return;
             Rate = rate;
+        }
+
+        public void ChangeTitle(string title)
+        {
+            if (Title != null)
+            Title = title;
         }
 
     }

@@ -11,6 +11,7 @@ using _253504_Zhak.Application.AuthorUseCase.Queries;
 using _253504_Zhak.Application.BookUseCase.Commands;
 using _253504_Zhak.Application.BookUseCase.Queries;
 using _253504_Zhak.UI.Pages;
+using _253504_Zhak.Domain.Entities;
 
 
 namespace _253504_Zhak.UI.ViewModels
@@ -51,7 +52,9 @@ namespace _253504_Zhak.UI.ViewModels
 
         public ObservableCollection<Author> Authors { get; set; } = new();
         public ObservableCollection<string> AuthorsNames { get; set; } = new();
-        public ObservableCollection<Book> Books { get; set; } = new();
+      
+        public ObservableCollection<Book> Books { get; set;} = new();
+
         public ObservableCollection<string> BookNames { get; set; } = new();
       
 
@@ -95,7 +98,7 @@ namespace _253504_Zhak.UI.ViewModels
         }
         public async Task GetBooks()
         {
-            var selectedAuthor = Authors.FirstOrDefault(project => project.Name == SelectedAuthorName);
+            var selectedAuthor = Authors.FirstOrDefault(author => author.Name == SelectedAuthorName);
             if (selectedAuthor != null)
             {
                 SelectedAuthor = selectedAuthor;
@@ -139,12 +142,13 @@ namespace _253504_Zhak.UI.ViewModels
                 var navigationParameter = new Dictionary<string, object>()
             {
                 { "SelectedAuthor", author },
-                { "LastAddedBookId", ++LastAddedBookId }
+                { "LastAddedBookId", ++LastAddedBookId },
+
             };
                 await Shell.Current.GoToAsync(nameof(AddNewBookView), navigationParameter);
             }
 
-            
+             await UpdateBookList();
         }
 
         public async Task EditAuthor()

@@ -92,7 +92,7 @@ namespace _253504_Zhak.UI.ViewModels
         {
             var authors = await _mediator.Send(new GetAllAuthorsRequest());
             if (BookName.Length != 0 && BookRate.HasValue && BookRate.Value >= 0 && BookRate.Value <= 10 &&
-                BookAuthorId.Value < authors.Last().Id &&
+                BookAuthorId.Value <= authors.Last().Id &&
                 BookAuthorId.Value > 0)
             {
                 await _mediator.Send(new EditBookCommand(BookName, BookRate.Value, _selectedBook.Id));

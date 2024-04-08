@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("253504_Zhak.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f5d3075ece3fa7dfbe787dff34a8c5f96c8ea15")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+782a463e54b581047fe2d985b4547cfa321c5fde")]
 [assembly: System.Reflection.AssemblyProductAttribute("253504_Zhak.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("253504_Zhak.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,9 +9,9 @@
              x:Class="_253504_Zhak.UI.Pages.Authors"
              Title="Authors">
     <ContentPage.Behaviors>
-        <toolkit:EventToCommandBehavior EventName="Loaded"
-                                        Command="{Binding UpdateAuthorListCommand}" />
+        <toolkit:EventToCommandBehavior EventName="Appearing" Command="{Binding UpdateBookListCommand}"/>
     </ContentPage.Behaviors>
+    
     <ContentPage.Resources>
         <converters:IdToImageSourceConverter x:Key="IdToImageSource"/>
     </ContentPage.Resources>
@@ -26,12 +26,16 @@
                 TextColor="Black"
                 Title="select Author"
                 ItemsSource="{Binding AuthorsNames}"
-                SelectedItem="{Binding SelectedAuthorName}">
+                SelectedItem="{Binding SelectedAuthorName}"
+                x:Name="AuthorsPicker"
+                
+                >
                 <Picker.Behaviors>
                     <toolkit:EventToCommandBehavior EventName="SelectedIndexChanged"
                                                     Command="{Binding UpdateBookListCommand}" />
                     <toolkit:EventToCommandBehavior EventName="Focused"
                                     Command="{Binding UpdateAuthorListCommand}" />
+                    
                 </Picker.Behaviors>
 
                 <Picker.Shadow>
@@ -57,7 +61,8 @@
                 HeightRequest="300">
                 <CollectionView
                 ItemsSource="{Binding Books}"
-                HeightRequest="400">
+                HeightRequest="400"
+                    >
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="entities:Book">
                             <Frame CornerRadius="10" Padding="10" 

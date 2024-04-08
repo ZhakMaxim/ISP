@@ -20,8 +20,8 @@ namespace _253504_Zhak.Application.BookUseCase.Commands
             Book existingBook =
                 await _unitOfWork.BookRepository.GetByIdAsync(request.SelectedTaskId, cancellationToken);
 
-            existingBook.Title = request.Title;
-            existingBook.Rate = request.Rate;
+            existingBook.ChangeTitle(request.Title);
+            existingBook.ChangeRate(request.Rate);
 
             await _unitOfWork.BookRepository.UpdateAsync(existingBook, cancellationToken);
             await _unitOfWork.SaveAllAsync();
